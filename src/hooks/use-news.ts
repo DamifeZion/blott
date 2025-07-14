@@ -2,7 +2,7 @@ import React from "react";
 import { updateState } from "../helpers/update-state";
 import type { NewsT } from "../types";
 
-const URL = "https://finnhub.io/api/v1/news";
+const URL = import.meta.env.VITE_API_KEY;
 const API_KEY = "crals9pr01qhk4bqotb0crals9pr01qhk4bqotbg";
 
 export const useNews = () => {
