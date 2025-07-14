@@ -1,17 +1,12 @@
 import React from "react";
 import { updateState } from "../helpers/update-state";
-import type { NewsT } from "../types";
+import type { NewsStateT } from "../types";
 
 const URL = import.meta.env.VITE_API_KEY;
 const API_KEY = "crals9pr01qhk4bqotb0crals9pr01qhk4bqotbg";
 
 export const useNews = () => {
-   const [state, setState] = React.useState<{
-      data: Array<NewsT>;
-      isLoading: boolean;
-      isError: boolean;
-      error: string;
-   }>({
+   const [state, setState] = React.useState<NewsStateT>({
       data: [],
       isLoading: false,
       isError: false,

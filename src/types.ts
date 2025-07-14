@@ -15,8 +15,15 @@ export type NewsT = {
    url: string;
 };
 
-export type NewsCardT = Omit<NewsT, "id" | "related" | "category" | "summary">
+export type NewsCardT = Omit<NewsT, "id" | "related" | "category" | "summary">;
 
 export type ErrorT = {
    message?: string;
-}
+};
+
+export type NewsStateT = {
+   data: Array<NewsT>;
+   isLoading: boolean;
+   isError: boolean;
+   error: string;
+};
