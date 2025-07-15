@@ -2,8 +2,8 @@ import React from "react";
 import { updateState } from "../helpers/update-state";
 import type { NewsStateT } from "../types";
 
-const URL = import.meta.env.VITE_API_KEY;
-const API_KEY = "crals9pr01qhk4bqotb0crals9pr01qhk4bqotbg";
+const URL = "https://finnhub.io/api/v1/news";
+const API_KEY = import.meta.env.VITE_API_KEY;
 
 export const useNews = () => {
    const [state, setState] = React.useState<NewsStateT>({
