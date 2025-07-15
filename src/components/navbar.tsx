@@ -1,6 +1,6 @@
 export const Navbar = () => {
    return (
-      <nav className="max-lg:border sticky top-0 bg-background">
+      <nav className="max-lg:border-b sticky top-0 bg-background">
          <header className="container h-20 flex justify-center items-center lg:items-end lg:pb-2">
             <button className="cursor-pointer">
                <img
