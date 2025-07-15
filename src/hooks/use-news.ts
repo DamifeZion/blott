@@ -2,8 +2,7 @@ import React from "react";
 import { updateState } from "../helpers/update-state";
 import type { NewsStateT } from "../types";
 
-const URL = "https://finnhub.io/api/v1/news";
-const API_KEY = import.meta.env.VITE_API_KEY;
+const URL = import.meta.env.VITE_SERVER_URL;
 
 export const useNews = () => {
    const [state, setState] = React.useState<NewsStateT>({
@@ -24,9 +23,6 @@ export const useNews = () => {
 
             const res = await fetch(URL, {
                method: "GET",
-               headers: {
-                  "X-Finnhub-Token": API_KEY,
-               },
             });
 
             if (!res.ok) {

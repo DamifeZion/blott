@@ -15,7 +15,7 @@ export const NewsCard: React.FC<NewsCardT> = ({
          className="p-4 flex gap-4 lg:flex-col lg:gap-2"
       >
          <img
-            src={image}
+            src={String(image)}
             alt={headline}
             className="w-full aspect-[10/11] sm:aspect-video max-lg:flex-1"
          />
