@@ -15,18 +15,18 @@ export const NewsCard: React.FC<NewsCardT> = ({
          className="p-4 flex gap-4 lg:flex-col lg:gap-2"
       >
          <img
-            src={String(image)}
+            src={image}
             alt={headline}
-            className="w-full aspect-[10/11] sm:aspect-video max-lg:flex-1"
+            className="w-full max-[500px]:object-cover min-w-24 aspect-[10/11] sm:aspect-video max-lg:flex-1"
          />
 
-         <div className="flex-[2]">
+         <div className="flex-[3]">
             <div className="flex items-center justify-between gap-2 *:text-muted-foreground text-xs">
                <p>{source}</p>
-               <p>{moment(datetime).format("DD MMMM YYYY")}</p>
+               <p>{moment(datetime).format("DD MMM YYYY")}</p>
             </div>
 
-            <h3 className="mt-2 font-medium lg:text-xl">
+            <h3 className="mt-2 font-medium max-[400px]:text-sm lg:text-xl">
                {headline}
             </h3>
          </div>
