@@ -21,7 +21,7 @@ export const useNews = () => {
             handleUpdateState("isError", false);
             handleUpdateState("error", "");
 
-            const res = await fetch(URL, {
+            const res = await fetch(`${URL}/news`, {
                method: "GET",
             });
 
